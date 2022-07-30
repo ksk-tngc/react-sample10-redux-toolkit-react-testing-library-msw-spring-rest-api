@@ -1,0 +1,21 @@
+.taskList {
+  width: 90%;
+  margin: auto;
+  max-height: 300px;
+  /* スクロールバーを有効にする */
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+/* タスクリストのスクロールバーを常に表示するための指定 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #aaa;
+}
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}

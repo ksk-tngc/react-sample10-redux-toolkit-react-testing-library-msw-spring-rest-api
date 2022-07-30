@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.taskMain {
+  background: #292f38;
+  width: 25%;
+  min-width: 450px;
+  height: 500px;
+  padding: 30px;
+  margin-right: 20px;
+  border-radius: 5px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.logoutBtn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  color: #bbb;
+  display: block;
+  margin-left: auto;
+}
+
+.userName {
+  color: #bbb;
+  font-size: 18px;
+  margin: 10px;
+  font-weight: 200;
+}
+
+.title {
+  margin-bottom: 13px;
+  color: whitesmoke;
+  font-weight: 300;
+  text-align: center;
+}

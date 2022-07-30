@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.taskDetail {
+  background: #292f38;
+  width: 15%;
+  min-width: 350px;
+  height: 300px;
+  padding: 25px;
+  margin-left: 20px;
+  border-radius: 5px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  color: whitesmoke;
+  font-weight: bold;
+  text-align: center;
+  margin: 18px;
+}
+
+.detailListTerm {
+  color: whitesmoke;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.detailListDetail {
+  color: whitesmoke;
+  text-align: center;
+  margin: 30px;
+  font-weight: 300;
+}

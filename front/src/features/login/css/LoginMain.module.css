@@ -1,0 +1,58 @@
+.loginMain {
+  background: #555;
+  width: 25%;
+  min-width: 350px;
+  height: 450px;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  color: white;
+  font-weight: normal;
+  text-align: center;
+  margin: 30px 0 20px;
+}
+
+.inputLabel {
+  color: white;
+  font-size: 15px;
+  display: block;
+}
+
+.input {
+  width: 85%;
+  margin: 20px;
+  background: #555;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid #333;
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+.loginButtonWrapper,
+.switchTextWrapper {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Material UI Button */
+button:global(.MuiButton-root) {
+  color: white;
+  font-size: 15px;
+  font-family: 'Comic Neue', cursive;
+}
+
+/* Material UI Button (disabled) */
+button:global(.MuiButton-root):disabled {
+  color: #999;
+}
+
+.switchText {
+  color: white;
+  background: #555;
+  cursor: pointer;
+  font-size: 15px;
+}
