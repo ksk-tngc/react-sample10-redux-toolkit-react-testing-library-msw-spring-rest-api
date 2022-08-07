@@ -3,10 +3,10 @@
 Redux Toolkit (RTK) と React Testing Library (RTL) のサンプルです。  
 バックエンドは Spring Boot で 簡易な REST API を作成しています。  
 
-フロントは RTL でコンポーネント・カスタムフック・RTK のテストを実施し、
+フロントは RTL でコンポーネント・カスタムフック・RTK のテストを実施し、  
 API は MSW でモックしています。  
 
-また、`npm run start:msw` でアプリケーション起動時も MSW が API コールをインターセプトします。  
+`npm run start:msw` でアプリケーション起動時も MSW が API コールをインターセプトします。  
 
 以下の要素を含みます：
 
@@ -55,4 +55,4 @@ https://user-images.githubusercontent.com/59589496/181875657-41cfd54c-77cb-4e69-
 
 `tree -C --noreport front/src back/src`
 
-<img width="520" src="https://user-images.githubusercontent.com/59589496/183291120-4dfd9884-47db-45f0-a10d-c4aac41d48c3.png" />
+<img width="520" src="https://user-images.githubusercontent.com/59589496/183291522-5c79b202-c6fd-4163-9c0d-f93df651a8da.png" />
