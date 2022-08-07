@@ -1,7 +1,7 @@
 import { FC, memo, useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../../../../app/hooks'
-import styles from '../../css/TaskList.module.css'
 import { getTasksAsync, selectTask } from '../../slice/taskSlice'
+import styles from './css/TaskList.module.css'
 import { TaskListItem } from './TaskListItem'
 
 /**

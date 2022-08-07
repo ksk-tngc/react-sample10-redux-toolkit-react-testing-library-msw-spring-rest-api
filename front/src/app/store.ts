@@ -3,15 +3,23 @@ import { loginReducer } from '../features/login/slice/loginSlice'
 import { taskReducer } from '../features/task/slice/taskSlice'
 
 /**
- * Store に Reducer を登録
- * 　・裏で combineReducers が走り、Reducer を結合してくれる。
+ * setup関数を用意してexportする
+ * （テストで毎回storeを作成するため）
  */
-export const store = configureStore({
-  reducer: {
-    login: loginReducer,
-    task: taskReducer,
-  },
-})
+export const setupStore = () => {
+  // Store に Reducer を登録
+  // 裏で combineReducers が走り、Reducer を結合してくれる。
+  const store = configureStore({
+    reducer: {
+      login: loginReducer,
+      task: taskReducer,
+    },
+  })
+  return store
+}
+
+// タスクAppのstore
+export const store = setupStore()
 
 // MEMO: Redux Toolkit のテンプレートのまま
 export type AppDispatch = typeof store.dispatch

@@ -1,7 +1,7 @@
 import { FC, memo } from 'react'
-import styles from '../../css/TaskTop.module.css'
 import { TaskDetail } from '../organisms/TaskDetail'
 import { TaskMain } from '../organisms/TaskMain'
+import styles from './css/TaskTop.module.css'
 
 /**
  * タスク画面トップページ

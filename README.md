@@ -1,7 +1,12 @@
 ## 概要
 
-Redux Toolkit のサンプルです。  
-バックエンドは Spring Boot で REST API を作成しています。
+Redux Toolkit (RTK) と React Testing Library (RTL) のサンプルです。  
+バックエンドは Spring Boot で 簡易な REST API を作成しています。  
+
+フロントは RTL でコンポーネント・カスタムフック・RTK のテストを実施し、
+API は MSW でモックしています。  
+
+また、`npm run start:msw` でアプリケーション起動時も MSW が API コールをインターセプトします。  
 
 以下の要素を含みます：
 
@@ -11,15 +16,17 @@ Redux Toolkit のサンプルです。
   - Custom Hook
   - 再レンダリングの最適化 (memo, useCallback)
 * State management
-  - Redux Toolkit
+  - Redux Toolkit (RTK)
 * Styling
   - CSS Modules
   - Material UI
   - React Icons
 * Routing
   - React Router
-* API
-  - axios
+* Testing
+  - Jest
+  - React Testing Library (RTL)
+  - Mock Service Worker (MSW)
 
 **バック (Spring Boot)**
 * REST API
@@ -45,4 +52,7 @@ https://user-images.githubusercontent.com/59589496/181875657-41cfd54c-77cb-4e69-
 <img width="740" src="https://user-images.githubusercontent.com/59589496/181876221-c01d888a-5cf0-4da3-87d7-0a7f603dd63c.png" />
 
 ## フォルダ構成
-<img width="520" src="https://user-images.githubusercontent.com/59589496/181877392-c049cff2-bb90-4f31-8e08-007548d0d41a.png" />
+
+`tree -C --noreport front/src back/src`
+
+<img width="520" src="https://user-images.githubusercontent.com/59589496/183291120-4dfd9884-47db-45f0-a10d-c4aac41d48c3.png" />

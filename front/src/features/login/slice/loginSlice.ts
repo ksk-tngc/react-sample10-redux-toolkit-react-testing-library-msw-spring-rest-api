@@ -140,6 +140,12 @@ export const loginSlice = createSlice({
         state.principalUser.id = action.payload.id
         state.principalUser.username = action.payload.username
       })
+      /**
+       * ログイン失敗時
+       */
+      .addCase(loginAsync.rejected, (state, action) => {
+        state.principalUser = initialState.principalUser
+      })
   },
 })
 

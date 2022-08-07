@@ -2,8 +2,8 @@ import { Button } from '@material-ui/core'
 import { FC, memo } from 'react'
 import { useAppDispatch, useAppSelector } from '../../../../app/hooks'
 import { useTask } from '../../../../hooks/useTask'
-import styles from '../../css/TaskInput.module.css'
 import { selectTask, taskSlice } from '../../slice/taskSlice'
+import styles from './css/TaskInput.module.css'
 
 /**
  * タスク入力テキストボックスと登録/更新ボタン
@@ -23,6 +23,7 @@ export const TaskInput: FC = memo(() => {
         placeholder="Please input task"
         value={inputTask}
         onChange={(e) => dispatch(setInputTask({ value: e.target.value }))}
+        data-testid="task-input"
       />
       {/* 登録/更新ボタン */}
       <div className={styles.btnWrap}>
@@ -31,6 +32,7 @@ export const TaskInput: FC = memo(() => {
           color="primary"
           disabled={!inputTask}
           onClick={async () => await createOrUpdateTaskAsync()}
+          data-testid="create-update-btn"
         >
           {mode === 'CREATE' ? 'Create' : 'Update'}
         </Button>

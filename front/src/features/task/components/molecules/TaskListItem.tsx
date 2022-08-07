@@ -3,8 +3,8 @@ import { BsTrash } from 'react-icons/bs'
 import { FaEdit } from 'react-icons/fa'
 import { TaskApiResponse } from '../../../../api/taskApi'
 import { useAppDispatch } from '../../../../app/hooks'
-import styles from '../../css/TaskListItem.module.css'
 import { deleteTaskAsync, taskSlice } from '../../slice/taskSlice'
+import styles from './css/TaskListItem.module.css'
 
 interface Props {
   task: TaskApiResponse
@@ -27,6 +27,7 @@ export const TaskListItem: FC<Props> = memo((props) => {
           dispatch(setSelectedTask(task.id))
           dispatch(setInputTask({ value: '' }))
         }}
+        data-testid="task-name"
       >
         {task.title}
       </span>
@@ -37,6 +38,7 @@ export const TaskListItem: FC<Props> = memo((props) => {
           onClick={() =>
             dispatch(taskSlice.actions.clickEditBtn({ id: task.id }))
           }
+          data-testid="edit-btn"
         >
           <FaEdit />
         </button>
@@ -44,6 +46,7 @@ export const TaskListItem: FC<Props> = memo((props) => {
         <button
           className={styles.taskIcon}
           onClick={() => dispatch(deleteTaskAsync(task.id))}
+          data-testid="del-btn"
         >
           <BsTrash />
         </button>

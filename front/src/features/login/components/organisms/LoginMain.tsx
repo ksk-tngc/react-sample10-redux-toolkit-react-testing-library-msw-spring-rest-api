@@ -3,13 +3,13 @@ import { FC, memo } from 'react'
 import { useAppDispatch, useAppSelector } from '../../../../app/hooks'
 import { useLogin } from '../../../../hooks/useLogin'
 import { useSignup } from '../../../../hooks/useSignup'
-import styles from '../../css/LoginMain.module.css'
 import {
   editPassword,
   editUserName,
   selectLogin,
   toggleMode,
 } from '../../slice/loginSlice'
+import styles from './css/LoginMain.module.css'
 
 /**
  * ログイン/サインアップのメイン領域
@@ -32,10 +32,16 @@ export const LoginMain: FC = memo(() => {
   return (
     <div className={styles.loginMain}>
       {/* タイトル */}
-      <h1 className={styles.title}>{isLoginView ? 'Login' : 'Resistor'}</h1>
+      <h1 className={styles.title} data-testid="header-title">
+        {isLoginView ? 'Login' : 'Resistor'}
+      </h1>
       {/* ユーザー名 */}
       <div>
-        <label htmlFor="username" className={styles.inputLabel}>
+        <label
+          htmlFor="username"
+          className={styles.inputLabel}
+          data-testid="username-label"
+        >
           Username
         </label>
         <input
@@ -44,11 +50,16 @@ export const LoginMain: FC = memo(() => {
           className={styles.input}
           value={inputValue.username}
           onChange={(e) => dispatch(editUserName({ value: e.target.value }))}
+          data-testid="username-input"
         />
       </div>
       {/* パスワード */}
       <div>
-        <label htmlFor="password" className={styles.inputLabel}>
+        <label
+          htmlFor="password"
+          className={styles.inputLabel}
+          data-testid="password-label"
+        >
           Password
         </label>
         <input
@@ -57,6 +68,7 @@ export const LoginMain: FC = memo(() => {
           className={styles.input}
           value={inputValue.password}
           onChange={(e) => dispatch(editPassword({ value: e.target.value }))}
+          data-testid="password-input"
         />
       </div>
       {/* ログイン/サインアップボタン */}
@@ -66,6 +78,7 @@ export const LoginMain: FC = memo(() => {
           color="primary"
           disabled={!inputValue.username || !inputValue.password}
           onClick={LoginButtonHandler}
+          data-testid="login-signup-btn"
         >
           {isLoginView ? 'Login' : 'Create'}
         </Button>
@@ -75,6 +88,7 @@ export const LoginMain: FC = memo(() => {
         <span
           className={styles.switchText}
           onClick={() => dispatch(toggleMode())}
+          data-testid="switch-text"
         >
           {isLoginView ? 'Create Account ?' : 'Back to Login'}
         </span>

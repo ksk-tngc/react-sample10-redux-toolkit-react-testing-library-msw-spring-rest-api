@@ -5,9 +5,15 @@ import { store } from './app/store'
 import { LoginTop } from './features/login/components/pages/LoginTop'
 import { TaskTop } from './features/task/components/pages/TaskTop'
 import './index.css'
+import { worker } from './mocks/browser'
 
 const container = document.getElementById('root')!
 const root = createRoot(container)
+
+// `npm start:msw` で起動した場合、API は msw でモックする（msw のサービスワーカーを起動する）
+if (process.env.REACT_APP_MSW_ENABLED === 'TRUE') {
+  worker.start()
+}
 
 root.render(
   /* NOTE: 
